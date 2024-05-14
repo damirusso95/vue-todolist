@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+     <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>todolist</title>
     <script src="https://unpkg.com/vue@3.4.27/dist/vue.global.js"></script>
 </head>
@@ -16,7 +18,10 @@
         <input type="text" v-model="newTodo" @keyup.enter="addTodo" placeholder="Aggiungi una nuova cosa da fare">
         <ul>
           <!-- v-for per ciclare sull'array e creare un elemento <li> per ogni elemento -->
-          <li v-for="(todo, index) in todos" :key="index">{{ todo }}</li>
+            <li v-for="(todo, index) in todos" :key="index">
+                {{ todo }}
+                <i class="fas fa-times" @click="removeTodo()"></i>
+              </li>
         </ul>
       </div>
 
