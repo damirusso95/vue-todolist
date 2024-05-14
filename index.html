@@ -9,6 +9,15 @@
 </head>
 <body>
 
+
+    <div id="app">
+        <h1>Lista di cose da fare</h1>
+        <ul>
+          <!-- v-for per ciclare sull'array e creare un elemento <li> per ogni elemento -->
+          <li v-for="(todo, index) in todos" :key="index">{{ todo }}</li>
+        </ul>
+      </div>
+
     <script src="./main.js"></script>
 </body>
 </html>
