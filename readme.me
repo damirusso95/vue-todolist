@@ -1,0 +1,8 @@
+1. inserisco il templeate iniziale di vue
+2. creao un div per istanziare Vue su html, poi sul Data inserisco il mio array di stringhe.
+successivamente creo un UL con un li dove inizializzo il v for per ciclare l'array:
+<li v-for="(todo, index) in todos" :key="index">{{ todo }}</li>.
+3. dopo l'array creo un nuovo data vuoto dove andrò a salvare i vari input per aggiornare la lista.
+4.creo un input che collegherò all'istanza vue tramite il v-model associato al NewTodo.
+5. creo un metodo per aggiungere i nuovi input all'array, dando una condizione che pushi l'input,poi resetto l'input.
+6.

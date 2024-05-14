@@ -15,24 +15,35 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-             // Array di cose da fare
-      todos: [
-        'Fare la spesa',
-        'Pulire la casa',
-        'Studiare Vue.js',
-        'Andare in palestra',
-        'Preparare la cena'
-      ]
-            
-            
+            // Array di cose da fare
+            todos: [
+                'Fare la spesa',
+                'Pulire la casa',
+                'Studiare Vue.js',
+                'Andare in palestra',
+                'Preparare la cena'
+            ],
+            //   qui salvo gli input
+            newTodo: ''
 
-            
         }
     },
-    
 
-    },
-    
+    methods: {
+        // nuova cosa da fare all'array todos
+        addTodo(){
+            if (this.newTodo.trim() !== ''){
+                // push sull'array
+                this.todos.push(this.newTodo);
+                // Resetta l'input
+          this.newTodo = ''; 
+            }
+        }
+    }
+
+
+},
+
 
 
 ).mount('#app')
